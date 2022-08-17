@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grahp"
+    app:startDestination="@id/tertrisFragment">
+    <fragment
+        android:id="@+id/snakeGameFragment"
+        android:name="com.example.easygame.ui.SnakeGameFragment"
+        android:label="SnakeGameFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.easygame.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_snakeGameFragment"
+            app:destination="@id/snakeGameFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tertrisFragment"
+            app:destination="@id/tertrisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tertrisFragment"
+        android:name="com.example.easygame.ui.TertrisFragment"
+        android:label="TertrisFragment" />
+</navigation>
